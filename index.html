@@ -226,7 +226,7 @@ async function submitLogin(){
   setLoading(btn, true);
   try {
     var res  = await fetch(APPS_SCRIPT_URL, {
-      method:'POST', headers:{'Content-Type':'application/json'},
+      method:'POST',
       body: JSON.stringify({ action:'login', uid:uid, pw:pw })
     });
     var data = await res.json();
@@ -272,7 +272,7 @@ async function submitRegister(){
   setLoading(btn, true);
   try {
     var res  = await fetch(APPS_SCRIPT_URL, {
-      method:'POST', headers:{'Content-Type':'application/json'},
+      method:'POST',
       body: JSON.stringify({ action:'register', uid:uid, name:name, dept:dept, pw:pw })
     });
     var data = await res.json();
